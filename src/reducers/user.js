@@ -1,14 +1,18 @@
 // Esse reducer será responsável por tratar as informações da pessoa usuária
+import { SEND_LOGIN } from '../actions';
 
-const userobj = {
+const INICIAL_STATE = {
   user: {
     email: '',
   },
 };
 
-const user = (state = userobj, action) => {
+const user = (state = INICIAL_STATE, action) => {
   switch (action.type) {
-  default: return state;
+  case SEND_LOGIN:
+    return { ...state, ...action.state };
+  default:
+    return state;
   }
 };
 
