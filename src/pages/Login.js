@@ -20,9 +20,10 @@ class Login extends React.Component {
       const { email, password } = this.state;
       const AT_SIGN = '@';
       const NUMBER_SIX = 6;
+      const DOT_COM = '.com';
       if (
         email.includes(AT_SIGN)
-      && email.includes('.com')
+      && email.includes(DOT_COM)
       && password.length >= NUMBER_SIX) {
         this.setState({ loginButtonDesable: false });
       } else {
