@@ -1,9 +1,16 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import propTypes from 'prop-types';
+import { xchange } from '../actions/index';
 
 class Wallet extends React.Component {
+  async componentDidMount() {
+    const { dispatch } = this.props;
+    dispatch(xchange());
+  }
+
   render() {
+    console.log(this.props);
     const { user: { email } } = this.props;
     return (
       <div>
@@ -17,6 +24,7 @@ class Wallet extends React.Component {
 
 const mapStateToProps = (state) => ({
   user: state.user,
+  currencies: state.currencies,
 });
 
 export default connect(mapStateToProps)(Wallet);
