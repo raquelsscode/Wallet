@@ -1,34 +1,28 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import propTypes from 'prop-types';
+import PropTypes from 'prop-types';
+import Header from '../Components/Header';
 import { xchange } from '../actions/index';
+import Form from '../Components/Form';
 
 class Wallet extends React.Component {
-  async componentDidMount() {
+  componentDidMount() {
     const { dispatch } = this.props;
     dispatch(xchange());
   }
 
   render() {
-    console.log(this.props);
-    const { user: { email } } = this.props;
     return (
       <div>
-        <h1>TrybeWallet</h1>
-        <p data-testid="email-field">{ email }</p>
-        <p data-testid="total-field">0</p>
-        <p data-testid="header-currency-field">BRL</p>
-      </div>);
+        <Header />
+        <Form />
+      </div>
+    );
   }
 }
 
-const mapStateToProps = (state) => ({
-  user: state.user,
-  currencies: state.currencies,
-});
-
-export default connect(mapStateToProps)(Wallet);
-
 Wallet.propTypes = {
-  email: propTypes.string,
-}.isRequired;
+  dispatch: PropTypes.func.isRequired,
+};
+
+export default connect()(Wallet);
