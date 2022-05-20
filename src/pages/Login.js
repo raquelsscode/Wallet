@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom';
 import { sendAction } from '../actions/index';
 
 class Login extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor() {
+    super();
     this.state = {
       email: '',
       password: '',
@@ -31,14 +31,6 @@ class Login extends React.Component {
       }
     });
   }
-
-  // btnFunction = () => {
-  //   const { dispatch, history } = this.props;
-  //   const { email } = this.state;
-  //   dispatch(addUser(email));
-
-  //   history.push('/carteira');
-  // }
 
   render() {
     const { email, password, loginButtonDesable } = this.state;
