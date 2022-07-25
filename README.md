@@ -1,6 +1,6 @@
 # Wallet 💰 
 
-Projeto de conversão de moedas para o dolar atrvés de uma API!
+Projeto de conversão de moedas para o dolar através de uma API!
 
 # Ferramentas Utilizadas :hammer_and_wrench:
 
