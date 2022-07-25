@@ -13,8 +13,8 @@ Projeto de conversão de moedas para o dolar através de uma API!
 
 1. Clone o repositório
 Use o comando: 
-```git clone git@github.com:raquelsscode/Star-Wars-Planets.git```
+```git clone git@github.com:raquelsscode/Wallet.git```
 2. Entre na pasta do repositório que você acabou de clonar:
-```cd Star-Wars-Planets```
+```cd Wallet```
 3. Instale as dependências
 ```npm install```
