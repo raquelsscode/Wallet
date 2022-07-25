@@ -1,13 +1,13 @@
 # Wallet 💰 
 
-Projeto de filtro dos planetas de Star Wars através de uma API!
+Projeto de conversão de moedas para o dolar atrvés de uma API!
 
 # Ferramentas Utilizadas :hammer_and_wrench:
 
 - React
+- Redux
 - HTML
 - CSS
-- Context API
 
 # Inicialização :heavy_check_mark:
 
