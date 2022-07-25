@@ -1,16 +1,20 @@
-# 🚧 README em construção 🚧
+# Wallet 💰 
 
-<!-- Olá, Tryber!
+Projeto de filtro dos planetas de Star Wars através de uma API!
 
-Esse é apenas um arquivo inicial para o README do seu projeto.
+# Ferramentas Utilizadas :hammer_and_wrench:
 
-É essencial que você preencha esse documento por conta própria, ok?
+- React
+- HTML
+- CSS
+- Context API
 
-Não deixe de usar nossas dicas de escrita de README de projetos, e deixe sua criatividade brilhar!
+# Inicialização :heavy_check_mark:
 
-⚠️ IMPORTANTE: você precisa deixar nítido:
-- quais arquivos/pastas foram desenvolvidos por você; 
-- quais arquivos/pastas foram desenvolvidos por outra pessoa estudante;
-- quais arquivos/pastas foram desenvolvidos pela Trybe.
-
--->
+1. Clone o repositório
+Use o comando: 
+```git clone git@github.com:raquelsscode/Star-Wars-Planets.git```
+2. Entre na pasta do repositório que você acabou de clonar:
+```cd Star-Wars-Planets```
+3. Instale as dependências
+```npm install```
