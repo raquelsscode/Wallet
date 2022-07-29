@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { sendExpenses } from '../actions/index';
+import '../WalletCSS/Form.css';
 
 class Form extends Component {
   constructor() {
@@ -42,10 +43,12 @@ class Form extends Component {
     const { value, description } = this.state;
 
     return (
+      <section className='form-container'>
       <form>
         <label htmlFor="value">
-          Valor
+          <h3>Valor</h3>
           <input
+            className='value'
             type="number"
             data-testid="value-input"
             name="value"
@@ -54,8 +57,9 @@ class Form extends Component {
           />
         </label>
         <label htmlFor="description">
-          Descrição
+          <h3>Descrição</h3>
           <input
+            className='description'
             type="text"
             data-testid="description-input"
             name="description"
@@ -64,7 +68,7 @@ class Form extends Component {
           />
         </label>
         <label htmlFor="moeda">
-          Moeda
+          <h3>Moeda</h3>
           <select
             name="currency"
             onChange={ this.handleChange }
@@ -81,7 +85,7 @@ class Form extends Component {
           </select>
         </label>
         <label htmlFor="method">
-          Forma de Pagamento:
+          <h3>Forma de Pagamento:</h3>
           <select
             onChange={ this.handleChange }
             name="method"
@@ -94,7 +98,7 @@ class Form extends Component {
           </select>
         </label>
         <label htmlFor="tag">
-          Categoria
+          <h3>Categoria</h3>
           <select
             onChange={ this.handleChange }
             name="tag"
@@ -115,6 +119,7 @@ class Form extends Component {
           Adicionar despesa
         </button>
       </form>
+      </section>
     );
   }
 }

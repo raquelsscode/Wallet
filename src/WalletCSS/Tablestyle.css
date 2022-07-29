@@ -1,0 +1,52 @@
+td , th {
+  padding: 16px;
+}
+
+th {
+  background-color: #1e1e24;
+}
+
+td {
+  color: black;
+  font-weight: 700;
+  text-align: center;
+}
+
+table {
+  background-color: #d7d9f2;
+  border-collapse: collapse;
+  box-shadow: 4px 4px 16px rgb(0, 0, 0, 0.55);
+  color: white;
+  font-family: Poppins, sans-serif;
+  letter-spacing: 1px;
+}
+
+.table-container {
+  display: flex;
+  font-size: 16px;
+  justify-content: center;
+}
+
+.delete-field {
+  background-color: #d7d9f2;
+  border: none;
+  cursor: pointer;
+  padding: 5px;
+}
+
+@media ( max-width : 700px ) {
+
+  table {
+    margin-left: 745px;
+    padding-left: 24px;
+    padding-right: 900px;
+  }
+}
+
+
+i {
+  color: black;
+  font-size: 20px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap') ;

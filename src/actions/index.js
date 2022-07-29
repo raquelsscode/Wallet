@@ -7,6 +7,9 @@ export const sendexchange = (arrayObj) => ({ type: GET_CURRENCIE, arrayObj });
 export const GET_EXPENSES = 'GET_EXPENSES';
 export const sendExpenses = (expenses) => ({ type: GET_EXPENSES, expenses });
 
+export const UPDATEEXPANSES = 'UPDATEEXPANSES';
+export const updateWalletExpensesStore = (state) => ({ type: 'UPDATEEXPANSES', state });
+
 export const xchange = () => async (dispatch) => {
   const EXCHANGE = 'https://economia.awesomeapi.com.br/json/all';
   const response = await fetch(EXCHANGE);
