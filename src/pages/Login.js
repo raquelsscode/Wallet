@@ -3,11 +3,14 @@ import propTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { sendAction } from '../actions/index';
+import styles from '../WalletCSS/Login.module.css';
+import wallet from '../WalletCSS/wallet.png';
 
 class Login extends React.Component {
   constructor() {
     super();
     this.state = {
+      name: '',
       email: '',
       password: '',
       loginButtonDesable: true,
@@ -33,40 +36,57 @@ class Login extends React.Component {
   }
 
   render() {
-    const { email, password, loginButtonDesable } = this.state;
+    const { name, email, password, loginButtonDesable } = this.state;
     const { dispatchInputs } = this.props;
     return (
-      <div>
-        <label htmlFor="email">
-          Email:
-          <input
-            type="text"
-            data-testid="email-input"
-            onChange={ this.handleChange }
-            value={ email }
-            name="email"
-          />
-        </label>
-        <label htmlFor="password">
-          Senha:
-          <input
-            type="password"
-            data-testid="password-input"
-            onChange={ this.handleChange }
-            value={ password }
-            name="password"
-          />
-        </label>
-        <Link to="/carteira">
-          <button
-            type="button"
-            disabled={ loginButtonDesable }
-            onClick={ () => dispatchInputs(email) }
-          >
-            Entrar
-          </button>
-        </Link>
-      </div>
+      <section className={ styles.container }>
+        <img src={ wallet } alt="wallet" />
+        <form>
+        <label htmlFor="name">
+            Nome:
+            <input
+              type="text"
+              placeholder="Nome"
+              data-testid="name-input"
+              onChange={ this.handleChange }
+              value={ name }
+              name="name"
+            />
+          </label>
+          <label htmlFor="email">
+            Email:
+            <input
+              type="text"
+              placeholder="Email"
+              data-testid="email-input"
+              onChange={ this.handleChange }
+              value={ email }
+              name="email"
+            />
+          </label>
+          <label htmlFor="password">
+            Senha:
+            <input
+              type="password"
+              placeholder="Senha"
+              data-testid="password-input"
+              onChange={ this.handleChange }
+              value={ password }
+              name="password"
+            />
+          </label>
+          <p>* Senha com no mínimo 6 caracteres</p>
+          <Link to="/carteira">
+            <button
+              type="button"
+              disabled={ loginButtonDesable }
+              onClick={ () => dispatchInputs(name) }
+            >
+              Entrar
+            </button>
+          </Link>
+        </form>
+      </section>
     );
   }
 }
