@@ -4,7 +4,6 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { sendAction } from '../actions/index';
 import styles from '../WalletCSS/Login.module.css';
-import wallet from '../WalletCSS/wallet.png';
 
 class Login extends React.Component {
   constructor() {
@@ -40,7 +39,7 @@ class Login extends React.Component {
     const { dispatchInputs } = this.props;
     return (
       <section className={ styles.container }>
-        <img src={ wallet } alt="wallet" />
+        <h1> Wallet </h1>
         <form>
         <label htmlFor="name">
             Nome:
